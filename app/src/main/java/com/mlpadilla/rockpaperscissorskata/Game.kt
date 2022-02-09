@@ -1,15 +1,16 @@
 package com.mlpadilla.rockpaperscissorskata
 
 object Game {
+    private val foo = setOf(
+        Pair(Gesture.ROCK, Gesture.SCISSORS),
+        Pair(Gesture.SCISSORS, Gesture.PAPER),
+        Pair(Gesture.PAPER, Gesture.ROCK)
+    )
     fun play(
         playerGesture: Gesture,
         opponentGesture: Gesture
     ): Player {
-        return if (playerGesture == Gesture.ROCK && opponentGesture == Gesture.SCISSORS) {
-            Player.PLAYER
-        } else if (playerGesture == Gesture.SCISSORS && opponentGesture == Gesture.PAPER) {
-            Player.PLAYER
-        } else if (playerGesture == Gesture.PAPER && opponentGesture == Gesture.ROCK) {
+        return if (foo.contains(Pair(playerGesture, opponentGesture))) {
             Player.PLAYER
         } else {
             Player.OPPONENT
