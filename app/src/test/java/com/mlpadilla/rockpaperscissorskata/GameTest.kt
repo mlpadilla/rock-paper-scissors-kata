@@ -44,4 +44,19 @@ class GameTest: BehaviorSpec({
             }
         }
     }
+
+    given("a player with gesture 'paper'") {
+        val playerGesture = Gesture.PAPER
+        and("an opponent with gesture 'scissors'") {
+            val opponentGesture = Gesture.SCISSORS
+            `when`("playing") {
+                then("the player wins") {
+                    Game.play(
+                        playerGesture = playerGesture,
+                        opponentGesture = opponentGesture
+                    ) shouldBe Player.OPPONENT
+                }
+            }
+        }
+    }
 })
