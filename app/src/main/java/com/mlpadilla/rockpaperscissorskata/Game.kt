@@ -9,6 +9,8 @@ object Game {
             Player.PLAYER
         } else if (playerGesture == Gesture.SCISSORS && opponentGesture == Gesture.PAPER) {
             Player.PLAYER
+        } else if (playerGesture == Gesture.PAPER && opponentGesture == Gesture.ROCK) {
+            Player.PLAYER
         } else {
             Player.OPPONENT
         }
