@@ -10,13 +10,7 @@ object Game {
         playerGesture: Gesture,
         opponentGesture: Gesture
     ): Player {
-        if (playerGesture == Gesture.ROCK && opponentGesture == Gesture.ROCK) {
-            return Player.DRAW
-        }
-        if (playerGesture == Gesture.SCISSORS && opponentGesture == Gesture.SCISSORS) {
-            return Player.DRAW
-        }
-        if (playerGesture == Gesture.PAPER && opponentGesture == Gesture.PAPER) {
+        if (playerGesture == opponentGesture) {
             return Player.DRAW
         }
 
