@@ -9,9 +9,14 @@ object Game {
     fun play(
         playerGesture: Gesture,
         opponentGesture: Gesture
-    ): Player =
-        when (playerWinningGestureCombinations.contains(Pair(playerGesture, opponentGesture))) {
+    ): Player {
+        if (playerGesture == Gesture.ROCK && opponentGesture == Gesture.ROCK) {
+            return Player.DRAW
+        }
+
+        return when (playerWinningGestureCombinations.contains(Pair(playerGesture, opponentGesture))) {
             true -> Player.PLAYER
             false -> Player.OPPONENT
         }
+    }
 }
