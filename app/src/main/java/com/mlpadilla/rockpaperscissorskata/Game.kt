@@ -9,11 +9,9 @@ object Game {
     fun play(
         playerGesture: Gesture,
         opponentGesture: Gesture
-    ): Player {
-        return if (playerWinningGestureCombinations.contains(Pair(playerGesture, opponentGesture))) {
-            Player.PLAYER
-        } else {
-            Player.OPPONENT
+    ): Player =
+        when (playerWinningGestureCombinations.contains(Pair(playerGesture, opponentGesture))) {
+            true -> Player.PLAYER
+            false -> Player.OPPONENT
         }
-    }
 }
