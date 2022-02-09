@@ -13,6 +13,9 @@ object Game {
         if (playerGesture == Gesture.ROCK && opponentGesture == Gesture.ROCK) {
             return Player.DRAW
         }
+        if (playerGesture == Gesture.SCISSORS && opponentGesture == Gesture.SCISSORS) {
+            return Player.DRAW
+        }
 
         return when (playerWinningGestureCombinations.contains(Pair(playerGesture, opponentGesture))) {
             true -> Player.PLAYER
