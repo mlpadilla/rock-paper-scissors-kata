@@ -14,7 +14,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.PLAYER
+                    winner shouldBe Winner.PLAYER
                 }
             }
         }
@@ -26,7 +26,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.OPPONENT
+                    winner shouldBe Winner.OPPONENT
                 }
             }
         }
@@ -38,7 +38,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.DRAW
+                    winner shouldBe Winner.DRAW
                 }
             }
         }
@@ -54,7 +54,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the opponent wins") {
-                    winner shouldBe Player.OPPONENT
+                    winner shouldBe Winner.OPPONENT
                 }
             }
         }
@@ -66,7 +66,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.PLAYER
+                    winner shouldBe Winner.PLAYER
                 }
             }
         }
@@ -78,7 +78,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.DRAW
+                    winner shouldBe Winner.DRAW
                 }
             }
         }
@@ -94,7 +94,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.OPPONENT
+                    winner shouldBe Winner.OPPONENT
                 }
             }
         }
@@ -106,7 +106,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.PLAYER
+                    winner shouldBe Winner.PLAYER
                 }
             }
         }
@@ -118,7 +118,7 @@ class GameTest: BehaviorSpec({
                     opponentGesture = opponentGesture
                 )
                 then("the player wins") {
-                    winner shouldBe Player.DRAW
+                    winner shouldBe Winner.DRAW
                 }
             }
         }

@@ -1,6 +1,6 @@
 package com.mlpadilla.rockpaperscissorskata
 
-enum class Player {
+enum class Winner {
     PLAYER,
     OPPONENT,
     DRAW
