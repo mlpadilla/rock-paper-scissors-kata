@@ -9,11 +9,12 @@ class GameTest: BehaviorSpec({
         and("an opponent with gesture 'scissors'") {
             val opponentGesture = Gesture.SCISSORS
             `when`("playing") {
+                val winner = Game.play(
+                    playerGesture = playerGesture,
+                    opponentGesture = opponentGesture
+                )
                 then("the player wins") {
-                    Game.play(
-                        playerGesture = playerGesture,
-                        opponentGesture = opponentGesture
-                    ) shouldBe Player.PLAYER
+                    winner shouldBe Player.PLAYER
                 }
             }
         }
@@ -24,22 +25,24 @@ class GameTest: BehaviorSpec({
         and("an opponent with gesture 'rock'") {
             val opponentGesture = Gesture.ROCK
             `when`("playing") {
+                val winner = Game.play(
+                    playerGesture = playerGesture,
+                    opponentGesture = opponentGesture
+                )
                 then("the opponent wins") {
-                    Game.play(
-                        playerGesture = playerGesture,
-                        opponentGesture = opponentGesture
-                    ) shouldBe Player.OPPONENT
+                    winner shouldBe Player.OPPONENT
                 }
             }
         }
         and("an opponent with gesture 'paper'") {
             val opponentGesture = Gesture.PAPER
             `when`("playing") {
+                val winner = Game.play(
+                    playerGesture = playerGesture,
+                    opponentGesture = opponentGesture
+                )
                 then("the player wins") {
-                    Game.play(
-                        playerGesture = playerGesture,
-                        opponentGesture = opponentGesture
-                    ) shouldBe Player.PLAYER
+                    winner shouldBe Player.PLAYER
                 }
             }
         }
@@ -50,22 +53,24 @@ class GameTest: BehaviorSpec({
         and("an opponent with gesture 'scissors'") {
             val opponentGesture = Gesture.SCISSORS
             `when`("playing") {
+                val winner = Game.play(
+                    playerGesture = playerGesture,
+                    opponentGesture = opponentGesture
+                )
                 then("the player wins") {
-                    Game.play(
-                        playerGesture = playerGesture,
-                        opponentGesture = opponentGesture
-                    ) shouldBe Player.OPPONENT
+                    winner shouldBe Player.OPPONENT
                 }
             }
         }
         and("an opponent with gesture 'rock'") {
             val opponentGesture = Gesture.ROCK
             `when`("playing") {
+                val winner = Game.play(
+                    playerGesture = playerGesture,
+                    opponentGesture = opponentGesture
+                )
                 then("the player wins") {
-                    Game.play(
-                        playerGesture = playerGesture,
-                        opponentGesture = opponentGesture
-                    ) shouldBe Player.PLAYER
+                    winner shouldBe Player.PLAYER
                 }
             }
         }
