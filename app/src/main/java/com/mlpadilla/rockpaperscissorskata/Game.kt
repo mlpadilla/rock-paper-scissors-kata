@@ -1,7 +1,7 @@
 package com.mlpadilla.rockpaperscissorskata
 
 object Game {
-    private val setOfGesturePairs = setOf(
+    private val playerWinningGestureCombinations = setOf(
         Pair(Gesture.ROCK, Gesture.SCISSORS),
         Pair(Gesture.SCISSORS, Gesture.PAPER),
         Pair(Gesture.PAPER, Gesture.ROCK)
@@ -10,7 +10,7 @@ object Game {
         playerGesture: Gesture,
         opponentGesture: Gesture
     ): Player {
-        return if (setOfGesturePairs.contains(Pair(playerGesture, opponentGesture))) {
+        return if (playerWinningGestureCombinations.contains(Pair(playerGesture, opponentGesture))) {
             Player.PLAYER
         } else {
             Player.OPPONENT
