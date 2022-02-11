@@ -9,63 +9,63 @@ class GameTest: BehaviorSpec({
         testPlay(
             playerGesture = Gesture.ROCK,
             opponentGesture = Gesture.SCISSORS,
-            winner = Winner.PLAYER
+            expectedWinner = Winner.PLAYER
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.ROCK,
             opponentGesture = Gesture.PAPER,
-            winner = Winner.OPPONENT
+            expectedWinner = Winner.OPPONENT
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.ROCK,
             opponentGesture = Gesture.ROCK,
-            winner = Winner.DRAW
+            expectedWinner = Winner.DRAW
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.SCISSORS,
             opponentGesture = Gesture.ROCK,
-            winner = Winner.OPPONENT
+            expectedWinner = Winner.OPPONENT
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.SCISSORS,
             opponentGesture = Gesture.PAPER,
-            winner = Winner.PLAYER
+            expectedWinner = Winner.PLAYER
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.SCISSORS,
             opponentGesture = Gesture.SCISSORS,
-            winner = Winner.DRAW
+            expectedWinner = Winner.DRAW
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.PAPER,
             opponentGesture = Gesture.SCISSORS,
-            winner = Winner.OPPONENT
+            expectedWinner = Winner.OPPONENT
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.PAPER,
             opponentGesture = Gesture.ROCK,
-            winner = Winner.PLAYER
+            expectedWinner = Winner.PLAYER
         )
     )
     include(
         testPlay(
             playerGesture = Gesture.PAPER,
             opponentGesture = Gesture.PAPER,
-            winner = Winner.DRAW
+            expectedWinner = Winner.DRAW
         )
     )
 })
@@ -73,7 +73,7 @@ class GameTest: BehaviorSpec({
 fun testPlay(
     playerGesture: Gesture,
     opponentGesture: Gesture,
-    winner: Winner
+    expectedWinner: Winner
 ) = behaviorSpec {
     given("a player with gesture '${playerGesture.name}' AND an opponent with gesture '${opponentGesture.name}'") {
         val playerGesture = playerGesture
@@ -85,7 +85,7 @@ fun testPlay(
                 opponentGesture = opponentGesture
             )
             then("the winner is: '${winner.name}'") {
-                winner shouldBe winner
+                winner shouldBe expectedWinner
             }
         }
 
